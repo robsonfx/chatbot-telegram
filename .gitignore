@@ -2,3 +2,4 @@
 n8n-data/
 postgres-data/
 redis-data/
+.DS_Store
