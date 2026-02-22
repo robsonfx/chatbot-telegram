@@ -33,8 +33,9 @@ Este projeto implementa um **chatbot inteligente de previsão do tempo** que se 
 ### Instalação
 
 1. **Clone o repositório:**
+- Considerando que você está no diretorio que quer clonar o projeto, faça:
 ```bash
-git clone <seu-repositorio>
+git clone ttps://github.com/robsonfx/chatbot-telegram
 
 ```
 
