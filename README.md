@@ -35,12 +35,12 @@ Este projeto implementa um **chatbot inteligente de previsão do tempo** que se 
 1. **Clone o repositório:**
 ```bash
 git clone <seu-repositorio>
-cd FTR_N8N
+
 ```
 
 2. **Crie o arquivo `.env` na raiz do projeto:**
 ```bash
-touch .env
+cp .env.example .env
 ```
 
 3. **Configure as variáveis de ambiente** (veja seção abaixo)
