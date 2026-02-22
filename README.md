@@ -236,12 +236,12 @@ TELEGRAM_BOT_TOKEN=seu_token_aqui
 **Exemplos de mensagens para enviar:**
 
 ```
-São Paulo
-Rio de Janeiro
-Brasília
-New York
-Paris
-Tokyo
+São Paulo, SP
+Rio de Janeiro, RJ
+Brasília, AP (simulando um erro)
+Macapa, AP 
+Belem,PA
+Manaus no Norte, DF (simulando um erro)
 ```
 
 ### 4. Resposta Esperada
@@ -249,17 +249,8 @@ Tokyo
 O bot deverá responder com um mensagem contendo:
 
 ```
-🌡️ Previsão do Tempo para São Paulo
+🌡️ Previsão do Tempo para São Paulo Temperatura: 28°C. Dia lindo hoje (algo parecido)
 
-Temperatura: 28°C
-Sensação térmica: 30°C
-Umidade: 65%
-Pressão: 1013 hPa
-Vento: 5 m/s
-Nuvens: 40%
-Condição: Parcialmente nublado
-Descrição: céu parcialmente nublado
-```
 
 ### 5. Monitorar Execução
 
@@ -272,7 +263,7 @@ Descrição: céu parcialmente nublado
 ## 🛠️ Estrutura do Projeto
 
 ```
-FTR_N8N/
+SEU_PROJETO/
 ├── docker-compose.yml       # Configuração dos containers
 ├── .env                     # Variáveis de ambiente (não commitar)
 ├── .env.example            # Template das variáveis de ambiente
