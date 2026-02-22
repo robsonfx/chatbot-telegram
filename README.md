@@ -115,11 +115,9 @@ OPENWEATHER_API_KEY=sua_chave_openweather_aqui
 # URL do Webhook (será usado pelo N8N para receber mensagens do Telegram)
 WEBHOOK_URL=https://seu-dominio.com
 
-# Banco de Dados (já configurado no docker-compose)
-DB_POSTGRESDB_PASSWORD=postgres
 
-# Redis
-REDIS_PASSWORD=seu_redis_password
+# Google AI Studio API Key (usada no nó Message Model)
+GOOGLE_API_KEY=sua_chave_google_ai_studio_aqui
 ```
 
 **⚠️ IMPORTANTE:** Nunca comite o arquivo `.env` com credenciais reais. Adicione à `.gitignore`:
@@ -214,6 +212,19 @@ TELEGRAM_BOT_TOKEN=seu_token_aqui
 1. Nome: `OpenWeather API`
 2. Campo **API Key**: `seu_OPENWEATHER_API_KEY`
 3. Clique em **"Save"**
+
+### Adicionar Credencial do Google AI Studio
+
+1. Nome: `Google AI Studio`
+2. Campo **API Key**: cole sua `GOOGLE_API_KEY`
+3. Clique em **"Save"**
+
+Uso no nó `Message Model`:
+
+- No workflow, adicione o nó **Message Model**
+- No campo de credenciais do nó, selecione a credencial `Google AI Studio` criada acima, ou configure `GOOGLE_API_KEY` como variável de ambiente em **Settings → Environment Variables**
+- Configure o modelo, entradas e parâmetros conforme a documentação do Google AI Studio
+- Salve o nó e ative o workflow
 
 ---
 
@@ -365,6 +376,7 @@ docker-compose ps
 - [Telegram Bot API](https://core.telegram.org/bots/api)
 - [OpenWeather API](https://openweathermap.org/api)
 - [Docker Compose](https://docs.docker.com/compose/)
+- [Google AI Studio](https://aistudio.google.com/api-keys)
 
 ---
 
@@ -374,6 +386,7 @@ docker-compose ps
 |----------|-----------|---------|
 | `TELEGRAM_BOT_TOKEN` | Token do bot Telegram | `123456789:ABCDefGHIjklMNOpqrSTUvwxYZ1234567890` |
 | `OPENWEATHER_API_KEY` | Chave de API do OpenWeather | `a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6` |
+| `GOOGLE_API_KEY` | Chave de API do Google AI Studio (Message Model) | `AIza...sua_chave_aqui` |
 | `WEBHOOK_URL` | URL do webhook para Telegram | `https://seu-dominio.com` |
 
 
@@ -395,4 +408,4 @@ Para dúvidas ou problemas, verifique:
 
 ---
 
-**Última atualização:** 21 de Fevereiro de 2026
+**Última atualização:** 22 de Fevereiro de 2026
